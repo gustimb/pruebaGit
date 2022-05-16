@@ -1,0 +1,445 @@
+/*reset*/
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+/*body*/
+
+body {
+    background-color: #e0ffff;
+    font-family: 'Ubuntu', sans-serif;
+    height: auto;
+    width: auto;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+/*div contenedor*/
+
+.contenedor {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 0.6fr 0.12fr 1.5fr 0.3fr;
+    grid-template-areas: "header header"
+        "nav nav"
+        "main main"
+        "footer footer";
+}
+
+/*header*/
+
+header {
+    background-image: url(../img/background-01.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: header;
+}
+
+.logoPrincipal {
+    padding: 1rem;
+    margin: 1rem;
+    height: 90px;
+}
+
+h1{
+    text-transform: uppercase;
+}
+
+/*nav*/
+
+nav {
+    grid-area: nav;
+}
+
+nav ul {
+    background-color: black;
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav ul li {
+    list-style-type: none;
+    margin: 0.6rem;
+}
+
+/*main*/
+
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    grid-area: main;
+}
+
+.mainTitle {
+    margin: 2rem;
+    text-align: center;
+}
+
+.divIndex {
+    width: 98%;
+    justify-content: center;
+}
+
+.mainIframe {
+    width: 100%;
+}
+
+.homeP {
+    margin: 2.5rem 1rem;
+    text-align: justify;
+    font-size: 1rem;
+}
+
+.whatsappIcon {
+    display: none;
+    width: 70px;
+    position: fixed;
+    top: 80%;
+    right: 15px;
+    animation-name: shake;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes shake {
+
+    from {
+        transform: translate(0px, 0px);
+    }
+
+    92% {
+        transform: translate(0px, 0px);
+    }
+
+    94% {
+        transform: translate(0px, 5px);
+    }
+
+    96% {
+        transform: translate(0px, 0px);
+    }
+
+    98% {
+        transform: translate(0px, -5px);
+    }
+
+    to {
+        transform: translate(0px, 0px);
+    }
+}
+
+/*main nosotros*/
+
+.divNosotros {
+    width: 85%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+    align-items: center;
+}
+
+.pNosotros {
+    margin-bottom: 3rem;
+    text-align: justify;
+}
+
+.imgNosotros {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 5px;
+}
+
+/*main servicios*/
+
+.listaServicios {
+    margin-bottom: 3rem;
+}
+
+body main div ul li {
+    list-style-type: none;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+/*main obras*/
+
+.divImgObras1 {
+    width: 90%;
+}
+
+.divImgObras2 {
+    width: 90%;
+}
+
+.imgMuestra {
+    width: 100%;
+    margin-bottom: 3rem;
+    border-radius: 5px;
+}
+
+/*formulario contacto*/
+
+.divFormulario {
+    width: 90%;
+    margin-bottom: 3rem;
+}
+
+form {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    height: auto;
+    padding: 2rem;
+}
+
+label,
+input,
+select {
+    height: 1.7rem;
+    width: 100%;
+    margin: 0.7rem 0rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+}
+
+label {
+    font-weight: bold;
+}
+
+textarea {
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 7rem;
+    min-height: 7rem;
+    margin: 0.7rem 0rem;
+    border-radius: 5px;
+}
+
+.botones {
+    padding: 0.5rem;
+    height: auto;
+    background-color: #354c5e;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+/*footer*/
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../img/background-01.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 5px;
+    text-align: center;
+    justify-content: center;
+    border-top: groove black;
+    color: white;
+    grid-area: footer;
+}
+
+.footerMain {
+    font-size: 0.8rem;
+    font-weight: 200;
+    margin: 0.5rem;
+}
+
+.footerRr {
+    font-size: 0.6rem;
+    font-weight: 200;
+    margin: 0.5rem;
+}
+
+@media screen and (min-width:600px) {
+
+    /*contenedor 600px*/
+
+    .contenedor {
+        grid-template-rows: 0.20fr 0.05fr 1fr 0.15fr;
+    }
+
+    /*main 600px*/
+
+    .mainTitle {
+        margin: 3rem 2rem;
+        text-align: center;
+    }
+
+    .divIndex {
+        width: 75%;
+    }
+
+    .mainIframe {
+        width: 100%;
+    }
+
+    .homeP {
+        margin: 0;
+        padding: 4rem;
+        font-size: 1rem;
+    }
+
+    .whatsappIcon {
+        display: block;
+    }
+
+    /*main nosotros 600px*/
+
+    .divNosotros {
+        width: 60%;
+    }
+
+    /*main servicios 600px*/
+
+    .listaServicios {
+        width: 70%;
+        text-align: left;
+    }
+
+    /*main obras 600px*/
+
+    .divImgObras1 {
+        width: 90%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .divImgObras2 {
+        width: 90%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .imgMuestra {
+        width: 45%;
+        margin-bottom: 3rem;
+        border-radius: 5px;
+    }
+
+    /*formulario contacto 600px*/
+
+    .divFormulario {
+        width: 70%;
+    }
+
+    form {
+        padding: 2rem 3rem;
+    }
+
+    .botones {
+        width: 45%;
+    }
+
+    .divBotones {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    /*footer 600px*/
+
+    .footer {
+        padding: 0.5rem;
+    }
+
+    @media screen and (min-width:1200px) {
+
+        /*header 1200px*/
+
+        header {
+            justify-content: start;
+        }
+
+        .logoPrincipal {
+            justify-content: start;
+            padding: 1rem;
+            margin: 1rem;
+            height: 100px;
+        }
+
+        /*nav 1200px*/
+
+        nav ul {
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0.6rem 2rem;
+            font-size: 1.2rem;
+        }
+
+        nav ul li a:hover {
+            color: black;
+            background-color: #e0ffff;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 0.6rem 0.8rem 0.8rem 0.8rem;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+        }
+
+        /*main 1200px*/
+
+        .divIndex {
+            margin: 0rem 2rem 5rem 2rem;
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+        }
+
+        .mainIframe {
+            width: 50%;
+            margin: 0rem 2rem;
+            padding: 0;
+        }
+
+        .homeP {
+            width: 50%;
+            margin: 0rem 2rem;
+            padding: 0;
+        }
+
+        /*main nosotros 600px*/
+
+        .divNosotros {
+            width: 50%;
+        }
+
+        .imgNosotros {
+            max-width: 30rem;
+        }
+
+        /*formulario contacto 1200px*/
+
+        .divFormulario {
+            width: 50%;
+        }
+
+        form {
+            padding: 3rem 4rem;
+        }
+
+        .botones {
+            width: 40%;
+        }
+    }
